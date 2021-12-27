@@ -1,0 +1,936 @@
+@font-face{
+    src: url('../font/Lato-Medium.ttf');  
+    
+    font-family: 'Lato';
+    font-weight: normal;
+    font-style: normal;
+    }
+
+/* 
+font-family:'Lato';  
+@import "http://fonts.fontstorage.com/import/lato.css";
+*/
+
+html, body {
+   min-width: 1437px; 
+}
+
+body {
+    font-size: 1em;
+    font-weight: normal;
+    font-family: 'Lato';
+    
+    margin: 0 auto;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    transition: .4s all;
+}
+
+.container {
+    width: 1300px;
+
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.container-footer {
+    width: 1220px;
+
+    margin: 0 auto;
+    padding: 25px;
+}
+
+p {
+    line-height: 24px;
+}
+
+button, a.link-button, a.link-button__small {
+    display: inline-block;
+
+    font-size: 1.4em;
+    text-transform: uppercase;
+
+    padding: 15px 50px;
+
+    background-color: #1B7DFF;
+    color: #fff;
+    border: 0;
+}
+
+a.link-button__small {
+    display: inline-block;
+
+    font-size: 1em;
+    padding: 12px 20px;
+}
+
+button:hover, a.link-button:hover, a.link-button__small:hover {
+    background-color: #1b69cf;
+}
+
+.wave-link {
+    text-transform: uppercase;
+
+    color: #006DFE;
+    
+    margin-right: 50px;
+
+    position: relative;
+}
+
+.wave-link img {
+    margin-left: 16px;
+    top: 6px;
+    position: absolute;
+}
+
+.wave-link:hover img {
+    margin-left: 25px;
+}
+
+.general-header {
+    font-size: 2.15em;
+
+    margin-bottom: 53px;
+    max-width: 480px;
+
+    color: #102746;
+}
+
+.general-header::after {
+    content: "";
+
+    display: block;
+    height: 3px;
+    width: 253px;
+
+    margin-top: 7px;
+
+    background-color: #006DFE;
+}
+
+input[type="button"], button, label {
+    cursor: pointer;
+} 
+
+/* work */
+
+/* \/=== page-header === */
+
+.page-header {
+    background-image: url("../images/header/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    padding: 30px 0 ;
+
+    color: #fff;
+    
+}
+
+.header-item {
+    position: relative;
+}
+
+/* \/header-sup */
+
+.header-item .header-sup {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+
+    margin-bottom: 185px;
+}
+
+.header-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.header-logo__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.header-nav__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px 80px;
+
+    max-width: 570px;
+
+    justify-self: end;
+}
+
+.header-nav__list a {
+    font-size: 1.1em;
+    padding: 7.5px;
+}
+
+.header-nav__list a:hover {
+    opacity: 0.5;
+}
+
+/* /\header-sup */
+
+/* \/header-main */
+
+.header-main__title {
+    font-size: 3.5em;
+    font-weight: 500;
+
+    margin-bottom: 22px;
+
+    width: 700px;
+}
+
+.header-main__info {
+
+    width: 540px;
+    margin-bottom: 80px;
+}
+
+.header-main__form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    width: 915px;
+
+
+    gap: 60px;
+
+    margin-bottom: 230px;
+}
+
+.header-main__form .form-item {
+    display: flex;
+    flex-basis: 300px;
+    padding-bottom: 25px;
+
+    border-bottom: 2px solid #fff;
+
+    position: relative;
+    cursor: pointer;
+}
+
+.header-form__input--radio {
+    /*margin-right: 25px;*/
+    height: 20px;
+    width: 20px;
+
+    border-radius: 50%;
+    
+    background-color: transparent;
+    border: 2px solid #fff;
+
+    appearance: none;
+
+    position: relative;
+}
+
+.header-form__input--radio +  .radio-input__click {
+    opacity: 0;
+    width: 12px;
+    height: 12px;
+    margin-left: 4px;
+    margin-top: 4px;
+
+    background-color: #fff;
+
+    position: absolute;
+
+    border-radius: 50%;
+}
+
+.header-main input[type="radio"]:checked + span {
+    opacity: 1;
+}
+
+.header-form__label {
+    font-size: 1.1em;
+
+    position: absolute;
+    
+    width: 100%;
+
+    padding: 25px;
+    padding-left: 45px;
+    padding-top: 0;
+}
+
+/* /\header-main */
+
+/* \/header-footer */
+
+.header-footer {
+    position: absolute;
+    left: -7.5%;
+    bottom: -800px;
+
+    width: 115%;
+
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+
+}
+
+.header-footer__item {
+    padding: 100px 70px 120px;
+    
+    width: 80.7%;
+    margin: 0 auto;
+}
+
+.header-footer__title {
+    font-size: 2.15em;
+
+    margin-bottom: 120px;
+    max-width: 340px;
+
+    color: #102746;
+}
+
+.header-footer__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 20px 30px;
+}
+
+.hfooter-list__item {
+    width: 320px;
+}
+
+.hfooter-list__logo {
+    margin-bottom: 37px;
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat !important;
+}
+
+.temple {
+    background: url("../images/header/header-footer/Icon1.svg")
+}
+
+.guide {
+    background: url("../images/header/header-footer/Icon2.svg")
+}
+
+.businesses {
+    background: url("../images/header/header-footer/Icon3.svg")
+}
+
+.hfooter-list__title {
+    font-size: 1.1em;
+
+    margin-bottom: 26px;
+    max-width: 270px;
+}
+
+.hfooter-list__info {
+    margin-bottom: 40px;
+    max-width: 305px;
+}
+
+/* /\header-footer */
+
+/* /\=== page-header === */
+
+
+
+
+
+
+
+
+
+
+/* ==== \/trip-list === */
+
+.trip {
+    margin: 650px 0 150px;
+}
+
+/* \/trip-sup */
+
+.trip-sup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 53px;
+}
+
+.trip-title {
+    margin-bottom: 0;
+}
+
+/* /\trip-sup */
+
+/* \/trip-main */
+
+.trip-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    width: 100%;
+}
+
+.trip-list__item {
+    flex-grow: 1;
+
+    position: relative;
+}
+
+.trip-pic-info {
+    opacity: 0;
+
+    display: flex;
+    align-items: flex-end;
+
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    transition: .4s all;
+}
+
+.trip-pic-info__title {
+    font-weight: 900;
+    font-size: 2.7em;
+
+    color: #fff;
+}
+
+li.trip-list__item:hover .trip-pic-info {
+    opacity: 1;
+}
+
+.trip-list__item--wide {
+    flex-basis: 49.6%;
+}
+
+.trip-list__item--wide .trip-item__image {
+    width: 619px;
+    height: 354px;
+}
+
+.trip-list__item--small {
+    flex-basis: 32.33555%;
+}
+
+.trip-list__item--small .trip-item__image {
+    width: 415px;
+    height: 283px;
+}
+
+.trip-item__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* /\trip-main */
+
+
+/* ==== /\trip-list === */
+
+
+
+
+
+
+
+/* ==== \/prefectures === */
+
+.prefectures {
+    margin-bottom: 150px;
+}
+
+.pfc-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+}
+
+.pfc-list__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+    color: #102746;
+}
+
+.pfc-list__item:nth-child(2n) > .pfc-list__item--image {
+    order: 1;
+    margin-left: 110px;
+    margin-right: 0;
+}
+
+.pfc-list__item--image {
+    width: 597px;
+    height: 354px;
+
+    margin-right: 110px;
+}
+
+.pfc-list__info {
+    width: 520px;
+}
+
+.pfc-list__title {
+    font-size: 1.8em;
+
+    margin-bottom: 85px;
+}
+
+.pfc-list__desc {
+    margin-bottom: 60px;
+}
+
+/* ==== /\prefectures === */
+
+
+
+
+/* ==== \/top-places === */
+
+.top-places {
+    margin-bottom: 144px;
+}
+
+.places-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 60px 46px;
+}
+
+.places-list__item {
+    width: 366px; 
+    position: relative;
+
+}
+ 
+.places-list__item--image {
+    width: 386px;
+    height: 377px;
+
+    margin-bottom: 48px;
+}
+
+.places-list__item--link:hover ~ .places-pic-info {
+    top: 322px;
+    opacity: 1;
+}
+
+.places-list__item::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 377px;
+
+    display: block;
+    height: 55px;
+    width: 366px;
+    z-index: 5;
+
+    margin-bottom: 50px;
+
+    background-color: #fff;
+}
+
+.places-pic-info {
+    opacity: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    left: 0;
+    top: 375px;
+
+    text-transform: uppercase;
+
+    padding: 15px 25px;
+
+    height: 55px;
+    width: 100%;
+
+    background: rgba(21, 24, 36, 0.6);
+    color: #fff;
+
+}
+
+.places-pic-info__title {
+    font-size: 1.3em;
+
+    text-transform: capitalize;
+}
+
+.places-pic-info__stat em {
+    padding-right: 10px;
+
+    position: relative;
+}
+
+.places-pic-info__stat em:not(:last-child) {
+    margin-right: 15px;
+}
+
+.places-pic-info__stat em.like::after {
+    content: "";
+
+    display: block;
+    height: 15px;
+    width: 15px;
+
+    position: absolute;
+    right: -8px;
+    top: 3.5px;
+
+    background-image: url("../images/places/info/heart.svg");
+    background-position: center;
+    background-size: 14px;
+    background-repeat: no-repeat;
+}
+
+.places-pic-info__stat em.comment::after {
+    content: "";
+
+    display: block;
+    height: 15px;
+    width: 15px;
+
+    position: absolute;
+    right: -12px;
+    top: 3.5px;
+
+    background-image: url("../images/places/info/comments.svg");
+    background-position: center;
+    background-size: 14px;
+    background-repeat: no-repeat;
+}
+
+.places-pic-info__desc {
+    margin-bottom: 40px;
+
+    color: #102746;
+}
+
+/* ==== /\top-places === */
+
+
+
+
+
+/* ==== \/trailer === */
+
+.trailer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 860px;
+
+    background: url("../images/trailer/bg.png") center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.trailer__button {
+    font-size: 0;
+
+    height: 120px;
+    width: 120px;
+
+    background: url("../images/trailer/Shape.svg") no-repeat;
+    background-position: center;
+    border-radius: 50%;
+}
+
+/* ==== /\trailer === */
+
+
+/* ==== \/footer === */
+
+.page-footer {
+    background-color: #0E1D28;
+    color: #fff;
+}
+
+.footer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 120px 0;
+}
+
+.footer-item .header-logo img {
+    width: 170px;
+    height: 64px;
+}
+
+.footer-lists__main {
+    display: flex;
+    justify-content: space-between;
+
+    width: 500px;
+}
+
+.footlist__sub--item {
+    margin-bottom: 8px;
+}
+
+.footlist__sub--title {
+    font-size: 1.1em;
+}
+
+.footlist__sub--item a:hover {
+    opacity: 0.5;
+}
+
+/* ==== /\footer === */
+
+
+/* adaptive */
+
+@media (max-width: 360px) {
+
+    html, body {
+        min-width: 1300px !important;
+    }
+
+    .container {
+        padding: 25px 45px !important;
+    }
+
+    p, a {
+        font-size: 1.3em;
+        line-height: 30px;
+    }
+
+    .wave-link {
+        font-size: 1.2em;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        word-spacing: 5px;
+        
+        color: #006DFE;
+        
+        margin-right: 50px;
+    
+        position: relative;
+    }
+    
+    .wave-link img {
+        position: absolute;
+        top: 3.5px;
+
+        width: 40px;
+        height: 15px;
+
+        margin-left: 16px;
+    }
+    
+    .wave-link:hover img {
+        margin-left: 25px;
+    }
+
+    .general-header {
+        font-size: 2.5em !important;
+    
+        margin-bottom: 53px;
+        
+    
+        color: #102746;
+    }
+    
+    .general-header::after {
+        content: "";
+    
+        display: block;
+        height: 3px;
+        width: 283px;
+    
+        margin-top: 7px;
+    
+        background-color: #006DFE;
+    }
+
+    .header-main form {
+        
+        width: auto !important;
+    }
+
+    /* \/header-footer */
+
+    .header-footer {
+        width: 1010px;
+
+        left: 8.5%;
+        bottom: -1150px;
+    }
+
+    .header-footer__list {
+        justify-content: center;
+
+        gap: 90px 35px;
+    }
+
+    /* /\header-footer */
+    
+
+    /* \/trip-list */
+
+    .trip {
+        margin-top: 950px;
+    }
+
+    .trip-list {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+
+    .trip-pic-info {
+        padding: 50px !important;
+    }
+
+    .trip-pic-info__title {
+        font-size: 5.2em !important;
+    }
+
+    .trip-item__image {
+        width: 1250px !important;
+        height: auto !important;
+    }
+
+    /* /\trip-list */
+
+
+
+
+    /* ==== \/prefectures === */
+
+
+    .pfc-list__item {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+
+        margin: 0 auto;
+    }
+
+    .pfc-list__item--image {
+        order: 0 !important;
+        margin: 0 0 30px !important;
+
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .pfc-list__info {
+        width: 800px;
+        text-align: center;
+    }
+
+    .pfc-list__title {
+        font-size: 2.5em;
+
+        margin-bottom: 40px;
+    }
+
+    /* ==== /\prefectures === */
+
+
+
+    /* ==== \/top-places === */
+
+    .places-list {
+        justify-content: center;
+        gap: 60px 50px;
+    }
+
+    .places-list__item {
+        margin: 0 20px;
+        width: 436px;
+    }
+
+    .places-list__item::before {
+        content: "";
+    
+        position: absolute;
+        left: -5px;
+        top: 377px;
+    
+        display: block;
+        height: 55px;
+        width: 445px;
+        z-index: 5;
+    
+        margin-bottom: 50px;
+    
+        background-color: #fff;
+    }
+
+    .places-list__item--image {
+        width: 436px !important;
+        height: 397px;
+
+        margin-bottom: 35px;
+    }
+
+    .places-pic-info__title {
+        font-size: 1.5em;
+        font-weight: 700;
+        letter-spacing: 3px;
+    
+        text-transform: capitalize;
+    }
+
+    /* ==== /\top-places === */
+
+
+    /* ==== \/footer === */
+
+
+    .footer-lists__main {
+        gap: 0 75px;
+    }
+
+    .footlists__sub--item {
+        font-size: 1.1em;
+        margin-bottom: 15px !important;
+    }
+    
+    .footlist__sub--title {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    
+    .footer-lists__main a:hover {
+        opacity: 0.5;
+    }
+
+    /* ==== /\footer === */
+}
