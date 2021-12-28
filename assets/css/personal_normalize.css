@@ -39,3 +39,16 @@ button {
 em, i {
     font-style: normal;
 }
+
+.dn {
+    display: none;
+}
+
+.unset {
+    padding: 0;
+    margin: 0;
+    text-transform: initial;
+    font-weight: initial;
+    color: initial;
+    background-color: initial;
+}

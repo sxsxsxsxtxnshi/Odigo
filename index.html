@@ -5,23 +5,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Odigo</title>
+        <link rel="icon" href="assets/images/icons/icon.webp" type=”image/x-icon”>
         <link rel="stylesheet" href="assets/css/normalize.css">
         <link rel="stylesheet" href="assets/css/personal_normalize.css">
         <link rel="stylesheet" href="assets/css/style.css">
-        
+        <script src="https://kit.fontawesome.com/0c2b99d758.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     </head>
-
     <body>
-
         <header class="page-header" id="header">
             <div class="container">
                 <div class="header-item">
                     <nav class="header-sup">
                         <div class="header-logo">
                             <a class="header-logo__link" href="index.html">
-                                <img src="./assets/images/header/odigo-Logo.svg" class="rp" alt="odigo-Logo">    
+                                <img src="assets/images/header/odigo-Logo.svg" class="header-logo__image rp" alt="odigo-Logo">    
                             </a>
-                            
                         </div>
 
                         <ul class="header-nav__list">
@@ -41,6 +42,33 @@
                                 <a href="#no_scroll">Sign in</a>
                             </li>
                         </ul>
+
+                        <!--===bar for 360px===-->
+                        <div class="bar-for__360px">
+                            <button class="header-bar">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                            <div class="bar-mask">
+                                <ul class="header-nav__list header-nav__list__320px">
+                                    <li class="header-nav__item">
+                                        <a href="#no_scroll">Articles</a>
+                                    </li>
+        
+                                    <li class="header-nav__item">
+                                        <a href="#no_scroll">Locations</a>
+                                    </li>
+        
+                                    <li class="header-nav__item">
+                                        <a href="#no_scroll">Videos</a>
+                                    </li>
+        
+                                    <li class="header-nav__item">
+                                        <a href="#no_scroll">Sign in</a>
+                                    </li>
+                                </ul>
+                            </div>    
+                        </div>
+                        <!--===bar for 360px===-->
                     </nav>
                     <!--=== /\header-sup ===-->
 
@@ -81,7 +109,10 @@
                                     
                                     <p class="hfooter-list__info">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.</p>
 
-                                    <a href="#no_scroll" class="wave-link">LEARN MORE <img src="assets/images/header/header-footer/Shape.svg" alt="wave-link"></a>
+                                    <div class="wave-link__block">
+                                        <a href="#no_scroll" class="wave-link">LEARN MORE </a>
+                                        <img class="rp wave-link__wave" src="assets/images/header/header-footer/Shape.svg" alt="wave-link">    
+                                    </div> 
                                 </li>
 
 
@@ -92,7 +123,10 @@
 
                                     <p class="hfooter-list__info">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.</p>
 
-                                    <a href="#no_scroll" class="wave-link">LEARN MORE <img src="assets/images/header/header-footer/Shape.svg" alt="wave-link"></a>
+                                    <div class="wave-link__block">
+                                        <a href="#no_scroll" class="wave-link">LEARN MORE </a>
+                                        <img class="rp wave-link__wave" src="assets/images/header/header-footer/Shape.svg" alt="wave-link">    
+                                    </div> 
                                 </li>
 
 
@@ -103,7 +137,10 @@
                                     
                                     <p class="hfooter-list__info">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.</p>
                                     
-                                    <a class="wave-link" href="#no_scroll">LEARN MORE <img src="assets/images/header/header-footer/Shape.svg" alt="wave-link"></a>
+                                    <div class="wave-link__block">
+                                        <a href="#no_scroll" class="wave-link">LEARN MORE </a>
+                                        <img class="rp wave-link__wave" src="assets/images/header/header-footer/Shape.svg" alt="wave-link">    
+                                    </div> 
                                 </li>
                             </ul>
                             <!--=== /\header-footer__list ===-->
@@ -122,14 +159,17 @@
                     <div class="trip-item">
                         <div class="trip-sup">
                             <h2 class="general-header trip-title">Get inspired for your next trip</h2> 
-                            <a href="#no_scroll" class="wave-link">view all <img src="assets/images/header/header-footer/Shape.svg" alt="wave-link"></a>   
+                            <div class="wave-link__block">
+                                <a href="#no_scroll" class="wave-link">LEARN MORE </a>
+                                <img class="rp wave-link__wave" src="assets/images/header/header-footer/Shape.svg" alt="wave-link">    
+                            </div> 
                         </div>
                         
                         <div class="trip-main">
                             <ul class="trip-list">
                                 <!--=== \/wide ===-->
                                 <li class="trip-list__item trip-list__item--wide">
-                                    <img class="trip-item__image" src="assets/images/trips/fuji.png" alt="fuji" width="619" height="354">
+                                    <img class="trip-item__image" src="assets/images/trips/fuji.webp" alt="fuji" width="619" height="354">
 
                                     <div class="trip-pic-info">
                                         <h2 class="trip-pic-info__title">
@@ -138,7 +178,7 @@
                                     </div>
                                 </li>
                                 <li class="trip-list__item trip-list__item--wide">
-                                    <img class="trip-item__image" src="assets/images/trips/kyoto.png" alt="kyoto" width="619" height="354">
+                                    <img class="trip-item__image" src="assets/images/trips/kyoto.webp" alt="kyoto" width="619" height="354">
 
                                     <div class="trip-pic-info">
                                         <h2 class="trip-pic-info__title">
@@ -150,7 +190,7 @@
 
                                 <!--=== \/small ===-->
                                 <li class="trip-list__item trip-list__item--small">
-                                    <img class="trip-item__image" src="assets/images/trips/tokyo.png" alt="tokyo" width="415" height="283">
+                                    <img class="trip-item__image" src="assets/images/trips/tokyo.webp" alt="tokyo" width="415" height="283">
 
                                     <div class="trip-pic-info">
                                         <h2 class="trip-pic-info__title">
@@ -160,7 +200,7 @@
                                 </li>
 
                                 <li class="trip-list__item trip-list__item--small">
-                                    <img class="trip-item__image" src="assets/images/trips/niigata.png" alt="niigata" width="415" height="283">
+                                    <img class="trip-item__image" src="assets/images/trips/niigata.webp" alt="niigata" width="415" height="283">
 
                                     <div class="trip-pic-info">
                                         <h2 class="trip-pic-info__title">
@@ -170,7 +210,7 @@
                                 </li>
 
                                 <li class="trip-list__item trip-list__item--small">
-                                    <img class="trip-item__image" src="assets/images/trips/sapporo.png" alt="sapporo" width="415" height="283">
+                                    <img class="trip-item__image" src="assets/images/trips/sapporo.webp" alt="sapporo" width="415" height="283">
 
                                     <div class="trip-pic-info">
                                         <h2 class="trip-pic-info__title">
@@ -195,26 +235,32 @@
 
                         <ul class="pfc-list">
                             <li class="pfc-list__item">
-                                <img class="pfc-list__item--image" src="assets/images/prefectures/tottori.png" alt="tottori" width="597" height="354"> 
+                                <img class="pfc-list__item--image" src="assets/images/prefectures/tottori.webp" alt="tottori" width="597" height="354"> 
 
                                 <div class="pfc-list__info">
                                     <h2 class="pfc-list__title">Prefecture in Focus: Tottori</h2>
 
                                     <p class="pfc-list__desc">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this if i had the energy but under the bed, for attack the child, open the door, </p>    
 
-                                    <a href="#no_scroll" class="wave-link">VIEW PREFECTURE <img src="assets/images/header/header-footer/Shape.svg" alt="wave-link"></a>
+                                    <div class="wave-link__block">
+                                        <a href="#no_scroll" class="wave-link">VIEW PREFECTURE </a>
+                                        <img class="rp wave-link__wave" src="assets/images/header/header-footer/Shape.svg" alt="wave-link">    
+                                    </div> 
                                 </div> 
                             </li>
 
                             <li class="pfc-list__item">
-                                <img class="pfc-list__item--image" src="assets/images/prefectures/kyoto.png" alt="kyoto" width="597" height="354"> 
+                                <img class="pfc-list__item--image" src="assets/images/prefectures/kyoto.webp" alt="kyoto" width="597" height="354"> 
 
                                 <div class="pfc-list__info">
                                     <h2 class="pfc-list__title">Featured Neighborhood: Kyoto’s Arashiyama</h2>
 
                                     <p class="pfc-list__desc">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this if i had the energy but under the bed, for attack the child, open the door, </p>    
 
-                                    <a href="#no_scroll" class="wave-link">VIEW NEIGHBORHOOD <img src="assets/images/header/header-footer/Shape.svg" alt="wave-link"></a>
+                                    <div class="wave-link__block">
+                                        <a href="#no_scroll" class="wave-link">VIEW NEIGHBORHOOD </a>
+                                        <img class="rp wave-link__wave" src="assets/images/header/header-footer/Shape.svg" alt="wave-link">    
+                                    </div> 
                                 </div> 
                             </li>
                         </ul>
@@ -233,7 +279,7 @@
                         <ul class="places-list">
                             <li class="places-list__item">
                                 <a class="places-list__item--link" href="#no_scroll">
-                                    <img class="places-list__item--image" src="assets/images/places/Image1.png" alt="nagoya" width="386" height="377">
+                                    <img class="places-list__item--image" src="assets/images/places/Image1.webp" alt="nagoya" width="386" height="377">
                                 </a>
                                 <div class="places-pic-info">
                                     <h2 class="places-pic-info__title">Nagoya</h2>
@@ -249,7 +295,7 @@
 
                             <li class="places-list__item">
                                 <a class="places-list__item--link" href="#no_scroll">
-                                    <img class="places-list__item--image" src="assets/images/places/Image2.png" alt="niigata" width="386" height="377">    
+                                    <img class="places-list__item--image" src="assets/images/places/Image2.webp" alt="niigata" width="386" height="377">    
                                 </a>
                                 <div class="places-pic-info">
                                     <h2 class="places-pic-info__title">Niigata</h2>
@@ -265,7 +311,7 @@
 
                             <li class="places-list__item">
                                 <a class="places-list__item--link" href="#no_scroll">
-                                    <img class="places-list__item--image" src="assets/images/places/Image3.png" alt="osaka" width="386" height="377">    
+                                    <img class="places-list__item--image" src="assets/images/places/Image3.webp" alt="osaka" width="386" height="377">    
                                 </a>
                                
                                 <div class="places-pic-info">
@@ -282,7 +328,7 @@
 
                             <li class="places-list__item">
                                 <a class="places-list__item--link" href="#no_scroll">
-                                    <img class="places-list__item--image" src="assets/images/places/Image4.png" alt="saitama" width="386" height="377">    
+                                    <img class="places-list__item--image" src="assets/images/places/Image4.webp" alt="saitama" width="386" height="377">    
                                 </a>
                                 <div class="places-pic-info">
                                     <h2 class="places-pic-info__title">saitama</h2>
@@ -298,7 +344,7 @@
 
                             <li class="places-list__item">
                                 <a class="places-list__item--link" href="#no_scroll">
-                                    <img class="places-list__item--image" src="assets/images/places/Image5.png" alt="ueno" width="386" height="377">    
+                                    <img class="places-list__item--image" src="assets/images/places/Image5.webp" alt="ueno" width="386" height="377">    
                                 </a>
                                 <div class="places-pic-info">
                                     <h2 class="places-pic-info__title">ueno</h2>
@@ -314,7 +360,7 @@
 
                             <li class="places-list__item">
                                 <a class="places-list__item--link" href="#no_scroll">
-                                    <img class="places-list__item--image" src="assets/images/places/Image6.png" alt="shibuya" width="386" height="377">    
+                                    <img class="places-list__item--image" src="assets/images/places/Image6.webp" alt="shibuya" width="386" height="377">    
                                 </a>
                                 <div class="places-pic-info">
                                     <h2 class="places-pic-info__title">shibuya</h2>
@@ -435,7 +481,5 @@
             </div>
         </footer>
         <!--===/\footer===-->
-
-
     </body>
 </html>

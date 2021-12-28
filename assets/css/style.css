@@ -1,16 +1,3 @@
-@font-face{
-    src: url('../font/Lato-Medium.ttf');  
-    
-    font-family: 'Lato';
-    font-weight: normal;
-    font-style: normal;
-    }
-
-/* 
-font-family:'Lato';  
-@import "http://fonts.fontstorage.com/import/lato.css";
-*/
-
 html, body {
    min-width: 1437px; 
 }
@@ -70,31 +57,32 @@ button:hover, a.link-button:hover, a.link-button__small:hover {
     background-color: #1b69cf;
 }
 
+.wave-link__block {
+    position: relative;
+}
+
 .wave-link {
     text-transform: uppercase;
 
     color: #006DFE;
     
-    margin-right: 50px;
-
-    position: relative;
+    margin-right: 20px;
 }
 
-.wave-link img {
-    margin-left: 16px;
+.wave-link + .wave-link__wave {
     top: 6px;
     position: absolute;
 }
 
-.wave-link:hover img {
-    margin-left: 25px;
+.wave-link:hover + .wave-link__wave {
+    margin-left: 10px;
 }
 
 .general-header {
     font-size: 2.15em;
 
     margin-bottom: 53px;
-    max-width: 480px;
+    max-width: 630px;
 
     color: #102746;
 }
@@ -120,7 +108,7 @@ input[type="button"], button, label {
 /* \/=== page-header === */
 
 .page-header {
-    background-image: url("../images/header/bg.png");
+    background-image: url("../images/header/bg.webp");
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -136,20 +124,16 @@ input[type="button"], button, label {
 
 /* \/header-sup */
 
-.header-item .header-sup {
+.header-sup {
     display: grid;
     grid-template-columns: 90px 1fr;
 
     margin-bottom: 185px;
 }
 
-.header-logo img {
-    width: 100%;
-    height: 100%;
-}
-
-.header-logo__link {
+.header-logo, .header-logo__link, .header-logo__image {
     display: block;
+
     width: 100%;
     height: 100%;
 }
@@ -172,6 +156,10 @@ input[type="button"], button, label {
 
 .header-nav__list a:hover {
     opacity: 0.5;
+}
+
+.bar-for__360px {
+    display: none;
 }
 
 /* /\header-sup */
@@ -268,10 +256,11 @@ input[type="button"], button, label {
 
 .header-footer {
     position: absolute;
+    top: 680px;
     left: -7.5%;
-    bottom: -800px;
-
+    
     width: 115%;
+    height: min-content;
 
     background-color: #fff;
     color: #000;
@@ -361,7 +350,7 @@ input[type="button"], button, label {
 .trip-sup {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
 
     margin-bottom: 53px;
 }
@@ -649,7 +638,7 @@ li.trip-list__item:hover .trip-pic-info {
     width: 100%;
     height: 860px;
 
-    background: url("../images/trailer/bg.png") center;
+    background: url("../images/trailer/bg.webp") center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -715,10 +704,11 @@ li.trip-list__item:hover .trip-pic-info {
 @media (max-width: 360px) {
 
     html, body {
-        min-width: 1300px !important;
+        min-width: 1280px !important;
     }
 
     .container {
+        width: 1280px;
         padding: 25px 45px !important;
     }
 
@@ -728,38 +718,22 @@ li.trip-list__item:hover .trip-pic-info {
     }
 
     .wave-link {
-        font-size: 1.2em;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 3px;
+        font-weight: 700;
         word-spacing: 5px;
-        
-        color: #006DFE;
-        
-        margin-right: 50px;
-    
-        position: relative;
+        letter-spacing: 1px;
     }
     
-    .wave-link img {
-        position: absolute;
-        top: 3.5px;
+    .wave-link__wave {
+        top: 7px;
 
         width: 40px;
         height: 15px;
-
-        margin-left: 16px;
     }
     
-    .wave-link:hover img {
-        margin-left: 25px;
-    }
-
     .general-header {
-        font-size: 2.5em !important;
+        font-size: 3em !important;
     
         margin-bottom: 53px;
-        
     
         color: #102746;
     }
@@ -776,40 +750,221 @@ li.trip-list__item:hover .trip-pic-info {
         background-color: #006DFE;
     }
 
-    .header-main form {
+    /* ===\/header=== */
+
+    .header-sup {
+        grid-template-columns: 200px 1fr !important;
+        justify-items: end;
+    }
+
+    .header-logo, .header-logo__link, .header-logo__image {
+        display: block;
+    
+        width: 100%;
+        height: 90%;
+    }
+
+    .header-nav__list {
+        display: none;
+    }
+
+    /* \/header-bar */
+
+    .header-nav__list__320px {
+        display: flex;
+    }
+    
+    .bar-for__360px {
+        display: block;
+        justify-self: end;
+        margin-right: 5%;
+    }
+
+    .header-bar {
+        font-size: 50px;
+
+        height: 50px;
+        width: 50px;
+        padding: 0;
+
+        background-color: transparent;
+    }
+
+    .header-bar:focus {
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+
+    .header-bar:focus ~ .bar-mask {
+        z-index: 7;
+        opacity: 1;
+        left: 0;
+    }
+
+    .header-bar:hover {
+        background-color: unset;
+    }
+
+    .bar-mask {
+        display: flex;
+        justify-content: center;
+
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 1280px;
+        height: 8000px;
+
+        position: fixed;
+        left: -1280px;
+        top: 0;
+        z-index: -5;
+
+        opacity: 0;
+    }
+
+    .header-nav__list__320px {
+        flex-direction: column;
+        row-gap: 100px;
+        margin-top: 500px;
+
+        text-transform: uppercase;
+        font-size: 3em;
+        font-weight: 900;
         
+    }
+    .header__bar {
+        display: block;
+    }
+
+    .header-main__form {
         width: auto !important;
     }
+
+    /* /\header-bar */
+
+    /* \/header-main */
+
+    .header-main__title {
+        font-size: 5.3em;
+        font-weight: 900;
+
+        margin-bottom: 40px;
+    }
+
+    .header-main__info {
+        font-size: 1.9em;
+        letter-spacing: 1px;
+        line-height: 45px;
+
+        width: 800px;
+    }
+
+    .header-main__form {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 80px;
+
+        width: 700px !important;
+    }
+    
+    .header-main__form .form-item {
+        font-size: 2.5em;
+
+        flex-basis: 0;
+        width: 660px;
+        padding-bottom: 35px;
+    }
+
+    .header-main__form .header-form__input--radio {
+        width: 60px;
+        height: 60px;
+
+        border-width: 5px;
+    }
+
+    .header-form__input--radio +  .radio-input__click {
+        width: 38px;
+        height: 38px;
+
+        margin-left: 11px;
+        margin-top: 11px;
+    }
+
+    .header-form__label {
+        font-size: 1em;
+        padding-left: 90px;
+    }
+
+    .header-form__button {
+        font-size: 2.5em;
+        margin: 0 auto;
+    }
+
+    /* /\header-main */
 
     /* \/header-footer */
 
     .header-footer {
         width: 1010px;
+        height: min-content;
 
-        left: 8.5%;
-        bottom: -1150px;
+        top: 1300px;
+        left: 7.5%;
+    }
+
+    .header-footer__item {
+        padding: 75px 0;
+    }
+
+    .header-footer__title {
+        font-size: 2.7em;
     }
 
     .header-footer__list {
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
 
-        gap: 90px 35px;
+        gap: 55px 35px;
+    }
+
+    .hfooter-list__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 420px;
+
+        text-align: center;
+    }
+
+    .hfooter-list__title {
+        font-size: 2.4em;
+    }
+
+    .hfooter-list__info {
+        font-size: 2em;
+
+        max-width: max-content;
     }
 
     /* /\header-footer */
+
+    /* ===/\header=== */
     
 
     /* \/trip-list */
 
     .trip {
-        margin-top: 950px;
+        margin-top: 1630px;
+    }
+
+    .trip-sup .wave-link__block {
+        margin-right: 40px;
     }
 
     .trip-list {
         flex-direction: column;
         row-gap: 30px;
     }
-
 
     .trip-pic-info {
         padding: 50px !important;
@@ -831,6 +986,9 @@ li.trip-list__item:hover .trip-pic-info {
 
     /* ==== \/prefectures === */
 
+    .pfc-list {
+        row-gap: 100px;
+    }
 
     .pfc-list__item {
         flex-direction: column;
@@ -855,9 +1013,14 @@ li.trip-list__item:hover .trip-pic-info {
     }
 
     .pfc-list__title {
-        font-size: 2.5em;
+        font-size: 3em;
 
         margin-bottom: 40px;
+    }
+
+    .pfc-list__desc{
+        font-size: 1.8em;
+        line-height: 38px;
     }
 
     /* ==== /\prefectures === */
@@ -867,25 +1030,26 @@ li.trip-list__item:hover .trip-pic-info {
     /* ==== \/top-places === */
 
     .places-list {
-        justify-content: center;
-        gap: 60px 50px;
+        flex-direction: column;
+        align-items: center;
+        gap: 100px 50px;
     }
 
     .places-list__item {
         margin: 0 20px;
-        width: 436px;
+        width: 760px;
+        text-align: center;
     }
 
     .places-list__item::before {
         content: "";
     
         position: absolute;
-        left: -5px;
-        top: 377px;
+        top: 742px;
     
         display: block;
         height: 55px;
-        width: 445px;
+        width: 100%;
         z-index: 5;
     
         margin-bottom: 50px;
@@ -893,19 +1057,66 @@ li.trip-list__item:hover .trip-pic-info {
         background-color: #fff;
     }
 
-    .places-list__item--image {
-        width: 436px !important;
-        height: 397px;
+    .places-list__item--link:hover ~ .places-pic-info {
+        top: 610px;
+        opacity: 1;
+    }
 
-        margin-bottom: 35px;
+    .places-list__item--image {
+        width: 100%;
+        height: 100%;
+
+        margin-bottom: 45.5px;
+    }
+
+    .places-pic-info {
+        font-weight: 700;
+        
+        top: 692px;
+
+        padding: 20px 35px;
+        height: 130px;
+        
     }
 
     .places-pic-info__title {
-        font-size: 1.5em;
-        font-weight: 700;
-        letter-spacing: 3px;
+        font-weight: inherit;
+        font-size: 2.7em;
     
         text-transform: capitalize;
+    }
+
+    .places-pic-info__stat {
+        font-size: 2.3em;
+        
+    }
+
+    .places-pic-info__stat em {
+        padding-right: 40px;
+    
+        position: relative;
+    }
+
+    .places-pic-info__stat em:not(:last-child) {
+        margin-right: 25px;
+    }
+
+    .places-pic-info__stat em.like::after, .places-pic-info__stat em.comment::after {
+        top: 2.5px;
+        background-size: 35px;
+
+        height: 45px;
+        width: 45px;
+    }
+
+    .places-pic-info__desc {
+        font-size: 2em;
+        line-height: 40px;
+    }
+
+    .places-list__item .link-button__small {
+        font-size: 2em;
+        padding: 22px 40px;
     }
 
     /* ==== /\top-places === */
@@ -913,18 +1124,28 @@ li.trip-list__item:hover .trip-pic-info {
 
     /* ==== \/footer === */
 
-
-    .footer-lists__main {
-        gap: 0 75px;
+    .footer-item {
+        justify-content: space-evenly;
     }
 
-    .footlists__sub--item {
-        font-size: 1.1em;
+    .footer-item .header-logo {
+        flex-grow: 1;
+    }
+
+    .footer-lists__main {
+        gap: 0 65px;
+        flex-grow: 1;
+        width: 630px;
+    }
+
+    .footlist__sub--item {
+        font-size: 1.3em;
         margin-bottom: 15px !important;
     }
     
     .footlist__sub--title {
-        font-size: 1.5em;
+        font-weight: 700;
+        font-size: 1.6em;
         margin-bottom: 20px;
     }
     
