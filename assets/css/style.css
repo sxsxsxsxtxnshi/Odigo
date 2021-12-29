@@ -295,22 +295,25 @@ input[type="button"], button, label {
     width: 320px;
 }
 
-.hfooter-list__logo {
+.hfooter-list__item::before {
+    content: "";
+
+    display: block;
     margin-bottom: 37px;
     width: 70px;
     height: 70px;
     background-repeat: no-repeat !important;
 }
 
-.temple {
+.hfooter-list__item--temple::before {
     background: url("../images/header/header-footer/Icon1.svg")
 }
 
-.guide {
+.hfooter-list__item--guide::before {
     background: url("../images/header/header-footer/Icon2.svg")
 }
 
-.businesses {
+.hfooter-list__item--businesses::before {
     background: url("../images/header/header-footer/Icon3.svg")
 }
 
@@ -701,7 +704,8 @@ li.trip-list__item:hover .trip-pic-info {
 
 /* adaptive */
 
-@media (max-width: 360px) {
+/* ===\/376px=== */
+@media (max-width: 768px) {
 
     html, body {
         min-width: 1280px !important;
@@ -751,6 +755,10 @@ li.trip-list__item:hover .trip-pic-info {
     }
 
     /* ===\/header=== */
+
+    .page-header {
+        padding-top: 60px;
+    }
 
     .header-sup {
         grid-template-columns: 200px 1fr !important;
@@ -823,11 +831,287 @@ li.trip-list__item:hover .trip-pic-info {
 
     .header-nav__list__320px {
         flex-direction: column;
-        row-gap: 100px;
-        margin-top: 500px;
+        row-gap: 130px;
+        margin-top: 300px;
 
         text-transform: uppercase;
-        font-size: 3em;
+        font-size: 4em;
+        font-weight: 900;
+        
+    }
+    .header__bar {
+        display: block;
+    }
+
+    .header-main__form {
+        width: auto !important;
+    }
+    /* /\header-bar */
+
+
+    /* \/header-main */
+
+    .header-main__form .form-item {
+        font-size: 1.5em;
+
+        flex-basis: 390px;
+        padding-bottom: 35px;
+    }
+
+    .header-form__label {
+        width: 135%;
+    }
+
+    /* /\header-main */
+
+    /* \/header-footer */
+
+    .header-footer {
+        width: 1010px;
+        height: min-content;
+
+        top: 730px;
+        left: 7.5%;
+    }
+
+    .header-footer__item {
+        padding: 75px 0;
+    }
+
+    .header-footer__title {
+        font-size: 2.7em;
+    }
+
+    .header-footer__list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 55px 35px;
+    }
+
+    .hfooter-list__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 420px;
+
+        text-align: center;
+    }
+
+    .hfooter-list__title {
+        font-size: 2.4em;
+    }
+
+    .hfooter-list__info {
+        font-size: 2em;
+
+        max-width: max-content;
+    }
+
+    /* /\header-footer */
+
+    /* ===/\header=== */
+    
+
+    /* \/trip-list */
+
+    .trip {
+        margin-top: 1630px;
+    }
+
+    .trip-sup .wave-link__block {
+        margin-right: 40px;
+    }
+
+    .trip-list {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .trip-pic-info {
+        padding: 50px !important;
+    }
+
+    .trip-pic-info__title {
+        font-size: 5.2em !important;
+    }
+
+    .trip-item__image {
+        width: 1250px !important;
+        height: auto !important;
+    }
+
+    /* /\trip-list */
+
+    /* ==== \/footer === */
+
+    .footer-item {
+        justify-content: space-evenly;
+    }
+
+    .footer-item .header-logo {
+        flex-grow: 1;
+    }
+
+    .footer-lists__main {
+        gap: 75px;
+        flex-grow: 1;
+        width: 630px;
+        margin-right: 100px;
+    }
+
+    .footlist__sub--item {
+        font-size: 1.3em;
+        margin-bottom: 15px !important;
+    }
+    
+    .footlist__sub--title {
+        font-weight: 700;
+        font-size: 1.6em;
+        margin-bottom: 20px;
+    }
+    
+    .footer-lists__main a:hover {
+        opacity: 0.5;
+    }
+
+    /* ==== /\footer === */
+
+}
+
+/* ===\/376px=== */
+@media (max-width: 426px) {
+
+    html, body {
+        min-width: 1280px !important;
+    }
+
+    .container {
+        width: 1280px;
+        padding: 25px 45px !important;
+    }
+
+    p, a {
+        font-size: 1.3em;
+        line-height: 30px;
+    }
+
+    .wave-link {
+        font-weight: 700;
+        word-spacing: 5px;
+        letter-spacing: 1px;
+    }
+    
+    .wave-link__wave {
+        top: 7px;
+
+        width: 40px;
+        height: 15px;
+    }
+    
+    .general-header {
+        font-size: 3em !important;
+    
+        margin-bottom: 53px;
+    
+        color: #102746;
+    }
+    
+    .general-header::after {
+        content: "";
+    
+        display: block;
+        height: 3px;
+        width: 283px;
+    
+        margin-top: 7px;
+    
+        background-color: #006DFE;
+    }
+
+    /* ===\/header=== */
+
+    .page-header {
+        padding-top: 60px;
+    }
+
+    .header-sup {
+        grid-template-columns: 200px 1fr !important;
+        justify-items: end;
+    }
+
+    .header-logo, .header-logo__link, .header-logo__image {
+        display: block;
+    
+        width: 100%;
+        height: 90%;
+    }
+
+    .header-nav__list {
+        display: none;
+    }
+
+    /* \/header-bar */
+
+    .header-nav__list__320px {
+        display: flex;
+    }
+    
+    .bar-for__360px {
+        display: block;
+        justify-self: end;
+        margin-right: 5%;
+    }
+
+    .header-bar {
+        font-size: 50px;
+
+        height: 50px;
+        width: 50px;
+        padding: 0;
+
+        background-color: transparent;
+    }
+
+    .header-bar:focus {
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+
+    .header-bar:focus ~ .bar-mask {
+        z-index: 7;
+        opacity: 1;
+        left: 0;
+    }
+
+    .header-bar:hover {
+        background-color: unset;
+    }
+
+    .bar-mask {
+        display: flex;
+        justify-content: center;
+
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 1280px;
+        height: 8000px;
+
+        position: fixed;
+        left: -1280px;
+        top: 0;
+        z-index: -5;
+
+        opacity: 0;
+    }
+
+    .header-nav__list__320px {
+        flex-direction: column;
+        row-gap: 130px;
+        margin-top: 1000px;
+
+        text-transform: uppercase;
+        font-size: 4em;
         font-weight: 900;
         
     }
@@ -870,7 +1154,7 @@ li.trip-list__item:hover .trip-pic-info {
         font-size: 2.5em;
 
         flex-basis: 0;
-        width: 660px;
+        width: 660px !important;
         padding-bottom: 35px;
     }
 
@@ -1155,3 +1439,5 @@ li.trip-list__item:hover .trip-pic-info {
 
     /* ==== /\footer === */
 }
+
+/* ===\/376px=== */
